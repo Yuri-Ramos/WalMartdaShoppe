@@ -17,8 +17,9 @@ li a {
     text-decoration: nome;
 }
 
-lia a:hover:not(.active){
+li a:hover:not(.active){
     background-color: #083358;
+    color: #fff;
 }
 
 .active {

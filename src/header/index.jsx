@@ -4,7 +4,7 @@ const Header = () => {
 
     return (
         <ul>
-            <li> <a className="active" href="#">Dashboard</a> </li>
+            <li> <a className="active" href="#">Home</a> </li>
             <li> <a href="#">Usuarios</a> </li>
             <li> <a href="#">Clientes</a> </li>
             <li> <a href="#">Relatórios</a> </li>

@@ -1,7 +1,7 @@
 import { Home } from "./screens/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DetalheProduto } from "./screens/DetalheProduto";
-import Header from "./screens/Home/components/Header";
+import Header from "./Header";
 import React from "react";
 
 function App() {
