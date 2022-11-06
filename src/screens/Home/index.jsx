@@ -8,6 +8,7 @@ export const Home = () => {
         <h1>Produtos</h1>
         <CardComponent/>
       </Container>
+      
     </main>
   );
 };

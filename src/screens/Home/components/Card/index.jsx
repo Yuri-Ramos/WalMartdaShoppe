@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import api from "../../../../data/data";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardTitle,
+  Container
+} from "./styles.js";
 export const CardComponent = () => {
   const [produtos, setProduto] = useState([]);
 
@@ -14,23 +21,24 @@ export const CardComponent = () => {
   return (
     <>
     <h1>DESTAQUES</h1>
-    <div>
-
+    <Container>
+  
       {produtos.map((produto) => {
             return (
-              <div key={produto.id}>
-
-                <img src={produto.fotoLink}/>
-                <h1>{produto.nome}</h1>
-                <p>R$ {produto.valor}</p>
-
-
-              </div>
+              <Card key={produto.id}>
+              
+                <CardImg src={produto.fotoLink}></CardImg>
+                <CardTitle>{produto.nome}</CardTitle>
+                <CardText>R$ {produto.valor}</CardText>
+                
+               
+              </Card>
             );
-
+          
       })}
-    </div>
+    </Container>
   </>
+);
 
-  )
+  
 }
