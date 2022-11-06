@@ -9,6 +9,10 @@ li {
     float: left;
 }
 
+ul li {
+    list-style: none;
+}
+
 li a {
     display: block;
     color: #fff;

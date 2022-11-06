@@ -1,14 +1,16 @@
 import "./index.css";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
 
+    if(useLocation().pathname == "/login") {
+        return (<></>);
+    }
+
     return (
         <ul>
-            <li> <a className="active" href="#">Dashboard</a> </li>
-            <li> <a href="#">Usuarios</a> </li>
-            <li> <a href="#">Clientes</a> </li>
-            <li> <a href="#">Relatórios</a> </li>
-            <li> <a href="#">Sair</a> </li>
+            <li> <Link className="active" to="/">Home</Link> </li>
+            <li> <Link to="/login">Login</Link> </li>
         </ul>
     )
 }
