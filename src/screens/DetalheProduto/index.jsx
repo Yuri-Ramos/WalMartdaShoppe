@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../../data/data";
+
 
 export const DetalheProduto = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
   const getProductById = () => {
-    const produto = data.find((d) => d.id == id);
+   // const produto = data.find((d) => d.id == id);
     setProduct(produto);
   };
   console.log(product);

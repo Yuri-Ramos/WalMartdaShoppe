@@ -1,9 +1,9 @@
-import { Home } from "./screens/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { DetalheProduto } from "./screens/DetalheProduto";
-import Header from "./Header";
 import React from "react";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Header from "./components/Header";
+import { DetalheProduto } from "./screens/DetalheProduto";
+import { Home } from "./screens/Home";
 function App() {
   return (
     <><Header />
@@ -12,8 +12,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/produto/:id" element={<DetalheProduto />} />
       </Routes>
+      <Footer/>
     </BrowserRouter></>
   );
 }
 
 export default App;
+

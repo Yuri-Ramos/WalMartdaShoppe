@@ -1,15 +1,44 @@
-import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import api from "../../../../data/data";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardTitle,
+  Container
+} from "./styles.js";
+export const CardComponent = () => {
+  const [produtos, setProduto] = useState([]);
 
-export const CardComponent = (props) => {
+  useEffect(() => {
+    api
+    .get("/produto")
+    .then((response) => setProduto(response.data))
+    .catch((err) => {
+      console.error("ops! ocorreu um erro" + err);
+    });
+  }, []);
   return (
-    <Card className="my-3 rounded">
-      <Card.Img src={props.fotoLink} height={200} width={200} />
-      <Card.Body>
-        <Card.Title>{props.nome}</Card.Title>
-        <Card.Text>{props.valor}</Card.Text>
-        <Link to={`/produto/${props.id}`}>Detalhe</Link>
-      </Card.Body>
-    </Card>
-  );
-};
+    <>
+    <h1>DESTAQUES</h1>
+    <Container>
+  
+      {produtos.map((produto) => {
+            return (
+              <Card key={produto.id}>
+              
+                <CardImg src={produto.fotoLink}></CardImg>
+                <CardTitle>{produto.nome}</CardTitle>
+                <CardText>R$ {produto.valor}</CardText>
+                
+               
+              </Card>
+            );
+          
+      })}
+    </Container>
+  </>
+);
+
+  
+}
