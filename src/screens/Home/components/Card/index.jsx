@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../../../../data/data";
 import {
   Card,
@@ -25,13 +26,16 @@ export const CardComponent = () => {
   
       {produtos.map((produto) => {
             return (
+              
               <Card key={produto.id}>
+                <Link to={`produto/${produto.id}`}>
               
                 <CardImg src={produto.fotoLink}></CardImg>
                 <CardTitle>{produto.nome}</CardTitle>
                 <CardText>R$ {produto.valor}</CardText>
                 
                
+              </Link>
               </Card>
             );
           
