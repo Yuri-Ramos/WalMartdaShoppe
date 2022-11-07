@@ -1,21 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-
+import api from "../../data/data";
+import {
+  Card,
+  CardImg,
+  CardImgDescricao,
+  CardText,
+  CardTitle,
+  CardDescricao,
+  Container,
+} from "../Home/components/Card/styles.js";
 export const DetalheProduto = () => {
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-
-  const getProductById = () => {
-   // const produto = data.find((d) => d.id == id);
-    setProduct(produto);
-  };
-  console.log(product);
+  useEffect(() => {
+    api
+      .get(`/produto/${id}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      });
+  }, [id]);
 
   return (
-    <div>
-      <h1>{product.nome}</h1>
-      <button onClick={() => getProductById()}>o</button>
-    </div>
+    <Card key={product.id}>
+      <CardImgDescricao src={product.fotoLink}></CardImgDescricao>
+      <CardTitle>{product.nome}</CardTitle>
+      <CardText>R$ {product.valor}</CardText>
+      <CardDescricao>{product.descricao}</CardDescricao>
+    </Card>
   );
 };
