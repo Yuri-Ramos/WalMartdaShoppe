@@ -43,9 +43,6 @@ export const CardImg = styled.img`
   width: 250px;
   border-radius: 8%;
 `;
-export const CardDescricao = styled.p`
-  color: blue;
-`;
 export const CardImgDescricao = styled.img`
   margin-top: 50px;
   margin: auto;
