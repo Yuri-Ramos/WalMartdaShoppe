@@ -6,7 +6,7 @@ import api from '../../data/data';
 import { FormInput } from '../formsStyles'
 
 
-const Funcionarios = () => {
+export const Funcionarios = () => {
     const [cpf, setCpf] = useState('');
     const [nome, setNome] = useState('');
     const [id, setId] = useState('');
@@ -94,5 +94,3 @@ const Funcionarios = () => {
     )
               
 }
-
-export default Funcionarios;

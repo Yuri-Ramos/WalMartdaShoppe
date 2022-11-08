@@ -6,7 +6,7 @@ import { InputLabel, Select, MenuItem, Grid, Typography } from '@material-ui/cor
 import { useForm, FormProvider } from 'react-hook-form';
 import { FormInput } from '../formsStyles'
 
-const ProdutoGerencia = () => {
+export const ProdutoGerencia = () => {
     const[id, setId] = useState('');
     const[descricao, setDescricao] = useState('');
     const[nome, setNome] = useState('');
@@ -121,5 +121,3 @@ const ProdutoGerencia = () => {
         </div>
     )
 }
-
-export default ProdutoGerencia;
