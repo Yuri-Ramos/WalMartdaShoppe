@@ -45,6 +45,8 @@ React Js
 
 * ***Breno Rick Espíndola Sanglar*** - *Desenvolvimento do código* -  [Breno Espíndola](https://github.com/BrenoSanglar))
 
+* ***Gabriel Nuevo*** - *Desenvolvimento do código*- [Gabriel Nuevo] ()
+
 <div>
 
 </div>
