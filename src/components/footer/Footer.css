@@ -69,3 +69,16 @@ footer{
 .bottom .center a:hover{
     text-decoration: underline;
 }
+
+#list{
+    list-style: none;
+
+}
+
+#img {
+    height: 150px;
+}
+
+#copy{
+    text-align: center;
+}

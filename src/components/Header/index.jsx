@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assents/logoWalmart.png";
 import "./index.css";
 
@@ -24,10 +24,10 @@ const Header = () => {
             <a class="nav-link active" aria-current="page" id="Le-menu" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " id="Le-menu"href="#">Produtos</a>
+            <NavLink class="nav-link sucess "  to="/" >Produtos </NavLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="Le-menu" href="#">Sobre</a>
+            <NavLink to="/" class="nav-link sucess"  >Sobre</NavLink>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="Le-menu" href="#">Contatos</a>

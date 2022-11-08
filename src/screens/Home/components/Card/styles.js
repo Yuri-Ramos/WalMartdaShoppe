@@ -3,8 +3,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: center;
-  width: 80%;
-  margin: auto;
+  // width: 80%;
   justify-content: center;
 `;
 

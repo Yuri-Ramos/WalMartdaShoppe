@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import api from "../../../../data/data";
 import { Card, CardImg, CardText, CardTitle, Container } from "./styles.js";
 export const CardComponent = () => {
@@ -15,8 +16,10 @@ export const CardComponent = () => {
   }, []);
   return (
     <>
-      <h1>banner</h1>
-      <Container>
+   
+      <Container className="mt-5">
+        
+        
         {produtos.map((produto) => {
           return (
             <Card key={produto.id}>
@@ -28,7 +31,10 @@ export const CardComponent = () => {
             </Card>
           );
         })}
+
+        
       </Container>
+    
     </>
   );
-};
+}
