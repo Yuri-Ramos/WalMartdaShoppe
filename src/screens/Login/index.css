@@ -16,12 +16,13 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    background-color: blue;
+    background-color: #0D63A5;
     color: #fff;
 }
 
 input {
     width: 100%;
+    color: #000;
 }
 
 p {
