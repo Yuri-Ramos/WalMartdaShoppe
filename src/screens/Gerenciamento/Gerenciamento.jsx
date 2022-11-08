@@ -25,7 +25,7 @@ export const Gerenciamento = () => {
 
 
     return(
-        <div>    
+        <div >    
             <Grid container spacing={4}>
                 <Grid>
                     <Card>

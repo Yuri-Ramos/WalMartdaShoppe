@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ecommerce-api-penguin.herokuapp.com",
+  baseURL: "https://yro.herokuapp.com/",
 });
 
 export default api;
