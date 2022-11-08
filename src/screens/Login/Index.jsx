@@ -9,17 +9,18 @@ const Login = (props) => {
     };
 
     return (
-        <div>
         <div className="box-login">
             <h1>Login</h1>
+            <br/>
             <label for="email"></label>
+            <p>Digite seu email</p>
             <input id="email" type="text"/>
-            <br/><br/>
-            <label for="senha"></label>
+            <br/>
+            <label for="email"></label>
+            <p>Digite sua senha</p>
             <input id="senha" type="password"/>
             <br/>
          <button id="btn-entrar" onClick={logar} type="button">Entrar</button>
-        </div>
         </div>
     )
 }

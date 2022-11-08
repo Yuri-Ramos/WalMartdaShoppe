@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../data/data";
 import {
-  Card, CardButon, CardImg,
+  Card, CardButon, CardDescription, CardImg,
   CardText,
   CardTitle,
   Container, Description,
@@ -34,6 +34,7 @@ const CardComponent = () => {
           </Photo>
           <Description>
             <CardTitle>{product.nome}</CardTitle>
+            <CardDescription>{product.descricao}</CardDescription>
             <CardText>R$ {product.valor}</CardText>
             <CardButon
               onClick={() => {
