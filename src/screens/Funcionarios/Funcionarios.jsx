@@ -13,7 +13,7 @@ export const Funcionarios = () => {
     const methods = useForm();
 
     const cadastrarFuncionario = (e) => {
-        console.log(cpf, nome, id);
+        e.preventDefault();
         try {
             api.post(`/funcionario`, {
                 cpf: cpf,
@@ -26,6 +26,7 @@ export const Funcionarios = () => {
     }
 
     const atualizarFuncionario = (e) => {
+        e.preventDefault();
         try {
             api.put(`/funcionario/${id}`, {
                 cpf: cpf,

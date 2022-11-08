@@ -30,6 +30,7 @@ export const ProdutoGerencia = () => {
     }, [])
 
     const cadastrarProduto = (e) => {
+        e.preventDefault();
         try {
             api.post(`/produto`, {
                 descricao: descricao,
@@ -50,6 +51,7 @@ export const ProdutoGerencia = () => {
     }
     
     const atualizarProduto = (e) => {
+        e.preventDefault();
         try {
             api.put(`/categoria/${id}`, {
                 descricao: descricao,
@@ -83,8 +85,8 @@ export const ProdutoGerencia = () => {
             <FormProvider {...methods}>
                 <form>
                     <Grid container spacing={3}>
-                        <FormInput required name="descricao" label="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
-                        <FormInput required name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
+                        <FormInput  name="descricao" label="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
+                        <FormInput  name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
                         <FormInput name="id" label="Id do Produto" value={id} onChange={(e) => setId(e.target.value)}/>
                         <Grid item xs={12} sm={6}>
                             <InputLabel>Lista de Produtos</InputLabel>
@@ -98,14 +100,14 @@ export const ProdutoGerencia = () => {
                                     })}
                             </Select>
                         </Grid>
-                        <FormInput required name="fotoLink" label="Link da foto" value={fotoLink} onChange={(e) => setFoto(e.target.value)}/>
-                        <FormInput required name="idCategoria" label="Id da Categoria" value={idCategoria} onChange={(e) => setIdCategoria(e.target.value)}/>
-                        <FormInput required name="nomeCategoria" label="Nome da Categoria" value={nomeCategoria} onChange={(e) => setNomeCategoria(e.target.value)}/>
-                        <FormInput required name="idFuncionario" label="Id do Funcionario" value={idFuncionario} onChange={(e) => setIdFuncionario(e.target.value)}/>
-                        <FormInput required name="nomeFuncionario" label="Nome do Funcionario" value={nomeFuncionario} onChange={(e) => setNomeFuncionario(e.target.value)}/>
-                        <FormInput required name="qtdEstoque" label="Quantidade em Estoque" value={qtdEstoque} onChange={(e) => setQtdEstoque(e.target.value)}/>
-                        <FormInput required name="valor" label="Valor" value={valor} onChange={(e) => setValor(e.target.value)}/>
-                        <FormInput required type="date" name="dataFabricacao" label="Data de Fabricacao" value={dataFabricacao} onChange={(e) => setData(e.target.value)}/>
+                        <FormInput  name="fotoLink" label="Link da foto" value={fotoLink} onChange={(e) => setFoto(e.target.value)}/>
+                        <FormInput  name="idCategoria" label="Id da Categoria" value={idCategoria} onChange={(e) => setIdCategoria(e.target.value)}/>
+                        <FormInput  name="nomeCategoria" label="Nome da Categoria" value={nomeCategoria} onChange={(e) => setNomeCategoria(e.target.value)}/>
+                        <FormInput  name="idFuncionario" label="Id do Funcionario" value={idFuncionario} onChange={(e) => setIdFuncionario(e.target.value)}/>
+                        <FormInput  name="nomeFuncionario" label="Nome do Funcionario" value={nomeFuncionario} onChange={(e) => setNomeFuncionario(e.target.value)}/>
+                        <FormInput  name="qtdEstoque" label="Quantidade em Estoque" value={qtdEstoque} onChange={(e) => setQtdEstoque(e.target.value)}/>
+                        <FormInput  name="valor" label="Valor" value={valor} onChange={(e) => setValor(e.target.value)}/>
+                        <FormInput  type="date" name="dataFabricacao" label="Data de Fabricacao" value={dataFabricacao} onChange={(e) => setData(e.target.value)}/>
                     </Grid>
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>

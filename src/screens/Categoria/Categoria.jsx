@@ -20,6 +20,7 @@ export const Categoria = () => {
         fetchCategoria();
     }, [])
     const cadastrarCategoria = (e) => {
+        e.preventDefault();
         try {
             api.post(`/categoria`, {
                 descricao: descricao,
@@ -32,6 +33,7 @@ export const Categoria = () => {
     }
     
     const atualizarCategoria = (e) => {
+        e.preventDefault();
         try {
             api.put(`/categoria/${id}`, {
                 descricao: descricao,
