@@ -59,9 +59,9 @@ export const Categoria = () => {
             <FormProvider {...methods}>
                 <form>
                     <Grid container spacing={3}>
-                        <FormInput required name="descricao" label="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
-                        <FormInput required name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
-                        <FormInput name="id" label="Id do Funcionario" value={id} onChange={(e) => setId(e.target.value)}/>
+                        <FormInput  name="descricao" label="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
+                        <FormInput  name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
+                        <FormInput  name="id" label="Id do Funcionario" value={id} onChange={(e) => setId(e.target.value)}/>
                         <Grid item xs={12} sm={6}>
                             <InputLabel>Lista de Categorias</InputLabel>
                             <Select value={categorias} fullWidth onClick={(e) => setId(e.target.value)}>
