@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { InputLabel, Select, MenuItem, Grid, Typography } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 
-const Cliente = () =>{
+export const Cliente = () =>{
     const[id, setId] = useState('');
     const[cpf, setCpf] = useState('');
     const[nome, setNome] = useState('');
@@ -142,5 +142,3 @@ const Cliente = () =>{
         </div>
     )
 }
-
-export default Cliente;

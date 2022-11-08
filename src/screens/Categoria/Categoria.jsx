@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import { InputLabel, Select, MenuItem, Grid, Typography } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 
-const Categoria = () => {
+export const Categoria = () => {
     const[descricao, setDescricao] = useState('');
     const[nome, setNome] = useState('');
     const[id, setId] = useState('');
@@ -87,5 +87,3 @@ const Categoria = () => {
         </div>
     )
 }
-
-export default Categoria;
