@@ -30,10 +30,10 @@ const Header = () => {
             <NavLink class="nav-link text-dark  " id="letra" to="/" >Produtos </NavLink>
           </li>
           <li class="nav-item">
-            <NavLink to="/sobre" class="nav-link text-dark ms-2" id="letra" >Sobre</NavLink>
+            <NavLink to="/gerenciamento" class="nav-link text-dark ms-2" id="letra" >Gerenciamento</NavLink>
           </li>
           <li class="nav-item">
-            <NavLink class="nav-link text-dark ms-2" id="letra" to="/faleconosco">Fale-Conosco</NavLink>
+            <NavLink class="nav-link text-dark ms-2" id="letra" to="/faleconosco">Fale Conosco</NavLink>
           </li>     
         </ul>
         

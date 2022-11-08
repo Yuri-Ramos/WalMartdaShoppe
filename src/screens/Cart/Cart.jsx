@@ -14,7 +14,9 @@ export const Cart = () => {
 
   return (
     <div className="container">
-      <h1> Cart</h1>
+      <h1 className="mt-4" id="title1"> Carrinho </h1>
+      <br/>
+      <br/>
       {productsCart.length === 0 && (
         <h1 className="fw-bold mb-0 text-black">Carrinho sem produtos</h1>
       )}
@@ -38,7 +40,7 @@ export const Cart = () => {
               <h6 className="mb-0 text-muted">Quantidade: {prod.quantidade}</h6>
             </div>
             <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-              <button
+              <button id="bntlik"
                 className="btn btn-link px-2"
                 onClick={() => handleRemoveItemToCart(prod.id)}
               >
@@ -55,7 +57,7 @@ export const Cart = () => {
                 className="form-control form-control-sm"
               />
 
-              <button
+              <button id="bntlik"
                 className="btn btn-link px-2"
                 onClick={() =>
                   handleAddItemToCart(
@@ -73,8 +75,8 @@ export const Cart = () => {
               <h6 className="mb-0">R$ {subTotal.toFixed(2)}</h6>
             </div>
             <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-              <button
-                className="btn btn-link"
+              <button 
+                className="btn btn-primary"
                 onClick={() => removalItem(prod.id)}
               >
                 <i class="fa fa-xmark"></i>
@@ -87,6 +89,9 @@ export const Cart = () => {
         );
       })}
       <h5 className="aligh-itens-center"> Valor total do pedido R$ {totalPrice.toFixed(2)}</h5>
+      <br/>
+      <br/>
     </div>
+
   );
 };

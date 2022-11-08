@@ -18,12 +18,10 @@ const Footer =() => {
     <div class="col-lg-3 col-xs-12 links none" >
       <h4 class="mt-lg-0 mt-sm-3">Links</h4>
         <ul class="m-0 p-0" id="list">
-          <li> <a href="#">Quem Somos</a></li>
-          <li> <a href="#">Parceiros</a></li>
-          <li> <a href="#">Residência em TIC</a></li>
-          <li> <a href="#">Notícias</a></li>
-          <li> <a href="#">Sed faucibus</a></li>
-          <li> <a href="#">Mauris efficitur nulla</a></li>
+          <li> <a href="#" id="letrafooter">Quem Somos</a></li>
+          <li> <a href="#" id="letrafooter">Parceiros</a></li>
+          <li> <a href="#" id="letrafooter">Residência em TIC</a></li>
+          <li> <a href="#" id="letrafooter">Notícias</a></li>
         </ul>
     </div>
     <div class="col-lg-4 col-xs-12 location">
