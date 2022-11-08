@@ -15,7 +15,7 @@ export const CardComponent = () => {
   }, []);
   return (
     <>
-      <h1>DESTAQUES</h1>
+      <h1>banner</h1>
       <Container>
         {produtos.map((produto) => {
           return (

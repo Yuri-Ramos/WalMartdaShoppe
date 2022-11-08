@@ -1,4 +1,4 @@
-import "./index.css"
+import "./index.css";
 
 const Login = (props) => {
 
@@ -7,6 +7,7 @@ const Login = (props) => {
     };
 
     return (
+        <div>
         <div className="box-login">
             <h1>Login</h1>
             <label for="email"></label>
@@ -15,7 +16,8 @@ const Login = (props) => {
             <label for="senha"></label>
             <input id="senha" type="password"/>
             <br/>
-            <button id="btn-entrar" onClick={logar} type="button">Entrar</button>
+         <button id="btn-entrar" onClick={logar} type="button">Entrar</button>
+        </div>
         </div>
     )
 }
