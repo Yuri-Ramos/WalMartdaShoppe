@@ -1,12 +1,12 @@
 import React from 'react';
-import "./sobre.module.css";
+import "./faleconosco.module.css";
 
-export const Sobre =() => {
+export const FaleConosco =() => {
     return(
         <div className="contener">
 
 
-            <h1> Sobre </h1>
+            <h1> fale conosco</h1>
 
 
 

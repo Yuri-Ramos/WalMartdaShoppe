@@ -1,12 +1,16 @@
+import Footer from "./components/footer/Footer.jsx";
+import Header from "./components/Header";
+import { Cart } from "./screens/Cart/Cart";
+import { DetalheProduto } from "./screens/DetalheProduto";
+import { FaleConosco } from "./screens/FaleConosco/FaleConosco.jsx";
 import { Home } from "./screens/Home";
 import Login from "./screens/Login";
-import { DetalheProduto } from "./screens/DetalheProduto";
-import Header from "./components/Header";
-import Footer from "./components/footer/Footer.jsx";
+import { Sobre } from "./screens/Sobre/Sobre";
+
 
 import React from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Router = () => (
   <BrowserRouter>
@@ -15,7 +19,10 @@ const Router = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/sobre" element={<Sobre />} />
       <Route path="/produto/:id" element={<DetalheProduto />} />
+     <Route path="/cart" element={<Cart />} />
+     <Route path="/faleconosco" element={<FaleConosco />} />
     </Routes>
 
     <Footer />

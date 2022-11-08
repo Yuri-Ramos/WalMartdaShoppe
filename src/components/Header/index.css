@@ -39,6 +39,15 @@ lia a:hover:not(.active){
 #IMG {
     height: 100px;
 }
-#Le-menu {
-    color: blue;
+
+#letra  {
+
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px ;
+}
+#letra:hover{
+    color:blue;
 }

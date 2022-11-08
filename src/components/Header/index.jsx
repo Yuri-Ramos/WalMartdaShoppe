@@ -2,6 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assents/logoWalmart.png";
 import "./index.css";
 
+
 const Header = () => {
 
     if(useLocation().pathname == "/login") {
@@ -21,29 +22,29 @@ const Header = () => {
         
         <ul class="navbar-nav mx-auto fs-3 mb-2 mb-lg-0">
           <li class="nav-item" >
-            <a class="nav-link active" aria-current="page" id="Le-menu" href="#">Home</a>
+            <NavLink class="nav-link active text-dark ms-2" aria-current="page" id="letra" to="/">Home</NavLink>
           </li>
           <li class="nav-item">
-            <NavLink class="nav-link sucess "  to="/" >Produtos </NavLink>
+            <NavLink class="nav-link text-dark  " id="letra" to="/" >Produtos </NavLink>
           </li>
           <li class="nav-item">
-            <NavLink to="/" class="nav-link sucess"  >Sobre</NavLink>
+            <NavLink to="/sobre" class="nav-link text-dark ms-2" id="letra" >Sobre</NavLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="Le-menu" href="#">Contatos</a>
+            <NavLink class="nav-link text-dark ms-2" id="letra" to="/faleconosco">Fale-Conosco</NavLink>
           </li>     
         </ul>
         
           <div className="button btn">
-              <a href="" className="btn btn-outline-dark">
+              <NavLink to="/login" className="btn btn-outline-dark">
               <i className="fa fa-sign-in me-1"></i> login
-              </a>
+              </NavLink>
   
           </div>
           <div className="button btn">
-              <a href="" className="btn btn-outline-dark">
+              <NavLink to="/cart" className="btn btn-outline-dark">
               <i className="fa fa-shopping-cart me-1"></i> Carrinho
-              </a>
+              </NavLink>
   
           </div>
   
