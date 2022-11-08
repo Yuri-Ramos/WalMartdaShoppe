@@ -4,7 +4,7 @@ import { Grid, Card, Typography, CardContent, CardActions } from '@material-ui/c
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
-const Gerenciamento = () => {
+export const Gerenciamento = () => {
     const navigate = useNavigate();
     const routeChange = () => {
         let path = `/funcionario`;
@@ -82,7 +82,5 @@ const Gerenciamento = () => {
             </Grid>
         </div>
     )
-}
-
-export default Gerenciamento;
+};
     
