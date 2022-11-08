@@ -1,7 +1,7 @@
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assents/logoWalmart.png";
 import "./index.css";
-
 
 const Header = () => {
 
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <div className="button btn">
               <NavLink to="/cart" className="btn btn-outline-dark">
-              <i className="fa fa-shopping-cart me-1"></i> Carrinho
+              <i className="fa fa-shopping-cart me-1"></i> Carrinho 
               </NavLink>
   
           </div>

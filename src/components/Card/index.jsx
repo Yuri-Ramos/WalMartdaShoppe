@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import api from "../../data/data";
 import {
-  Card,
-  CardImg,
+  Card, CardButon, CardImg,
   CardText,
   CardTitle,
-  Container,
-  Photo,
-  Description,
-  Destaque,
-  CardButon,
+  Container, Description,
+  Destaque, Photo
 } from "./styles.js";
 const CardComponent = () => {
   const [product, setProduct] = useState([]);
@@ -27,9 +22,7 @@ const CardComponent = () => {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
-  const AdicionarAoCarrinho = () => {
-    alert("Add ai amigo");
-  };
+ 
 
   return (
     <>
@@ -44,7 +37,7 @@ const CardComponent = () => {
             <CardText>R$ {product.valor}</CardText>
             <CardButon
               onClick={() => {
-                AdicionarAoCarrinho();
+                handleAddItemToCart();
               }}
             >
               Adicionar ao carrinho{" "}
