@@ -34,6 +34,7 @@ export const Cliente = () =>{
     }, [])
 
     const cadastrarCliente = (e) => {
+        e.preventDefault();
         try {
             api.post(`/cliente`, {
                 cpf: cpf,
@@ -58,6 +59,7 @@ export const Cliente = () =>{
     }
     
     const atualizarCliente = (e) => {
+        e.preventDefault();
         try {
             api.put(`/cliente/${id}`, {
                 cpf: cpf,
