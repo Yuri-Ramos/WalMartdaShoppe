@@ -34,7 +34,6 @@ export const Cliente = () =>{
     }, [])
 
     const cadastrarCliente = (e) => {
-        e.preventDefault();
         try {
             api.post(`/cliente`, {
                 cpf: cpf,
@@ -59,7 +58,6 @@ export const Cliente = () =>{
     }
     
     const atualizarCliente = (e) => {
-        e.preventDefault();
         try {
             api.put(`/cliente/${id}`, {
                 cpf: cpf,
@@ -83,7 +81,6 @@ export const Cliente = () =>{
     }
 
     const deletarCliente = (e) => {
-        e.preventDefault();
         try {
             api.delete(`/cliente/${id}`)
         } catch (error) {
@@ -92,19 +89,19 @@ export const Cliente = () =>{
     }
 
     return(
-        <div>
+        <div className="display-flex">
             <Grid container spacing={3}>
             <Typography variant="h6" gutterBottom>Clientes</Typography>
             </Grid>
             <FormProvider {...methods}>
                 <form>
                     <Grid container spacing={3}>
-                        <FormInput required name="cpf" label="Cpf" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
-                        <FormInput required name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
+                        <FormInput  name="cpf" label="Cpf" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
+                        <FormInput  name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
                         <FormInput name="id" label="Id do Cliente" value={id} onChange={(e) => setId(e.target.value)}/>
-                        <FormInput required name="user" label="Usuario" value={user} onChange={(e) => setUser(e.target.value)}/>
-                        <FormInput required name="data" type="date" label="Data de Nascimento" value={data} onChange={(e) => setData(e.target.value)}/>
-                        <FormInput required name="email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <FormInput  name="user" label="Usuario" value={user} onChange={(e) => setUser(e.target.value)}/>
+                        <FormInput  name="data" type="date" label="Data de Nascimento" value={data} onChange={(e) => setData(e.target.value)}/>
+                        <FormInput  name="email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <Grid item xs={12} sm={6}>
                             <InputLabel>Lista de Clientes</InputLabel>
                             <Select value={clientes} fullWidth onClick={(e) => setId(e.target.value)}>
@@ -123,13 +120,13 @@ export const Cliente = () =>{
                         <Typography variant="h6" gutterBottom textalign='center'>Endereço</Typography>
                     </Grid>
                     <Grid container spacing={3}>
-                        <FormInput required name="rua" label="Rua" value={rua} onChange={(e) => setRua(e.target.value)}/>
-                        <FormInput required name="numero" label="Numero" value={numero} onChange={(e) => setNumero(e.target.value)}/>
-                        <FormInput name="bomplemento" label="Complemento" value={complemento} onChange={(e) => setComplemento(e.target.value)}/>
-                        <FormInput required name="bairro" label="Bairro" value={bairro} onChange={(e) => setBairro(e.target.value)}/>
-                        <FormInput required name="cidade" label="Cidade" value={cidade} onChange={(e) => setCidade(e.target.value)}/>
-                        <FormInput required name="uf" label="Uf" value={uf} onChange={(e) => setUf(e.target.value)}/>
-                        <FormInput required name="cep" label="Cep" value={cep} onChange={(e) => setCep(e.target.value)}/>
+                        <FormInput  name="rua" label="Rua" value={rua} onChange={(e) => setRua(e.target.value)}/>
+                        <FormInput  name="numero" label="Numero" value={numero} onChange={(e) => setNumero(e.target.value)}/>
+                        <FormInput  name="bomplemento" label="Complemento" value={complemento} onChange={(e) => setComplemento(e.target.value)}/>
+                        <FormInput  name="bairro" label="Bairro" value={bairro} onChange={(e) => setBairro(e.target.value)}/>
+                        <FormInput  name="cidade" label="Cidade" value={cidade} onChange={(e) => setCidade(e.target.value)}/>
+                        <FormInput  name="uf" label="Uf" value={uf} onChange={(e) => setUf(e.target.value)}/>
+                        <FormInput  name="cep" label="Cep" value={cep} onChange={(e) => setCep(e.target.value)}/>
                     </Grid>    
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>

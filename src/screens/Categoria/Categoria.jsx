@@ -20,7 +20,6 @@ export const Categoria = () => {
         fetchCategoria();
     }, [])
     const cadastrarCategoria = (e) => {
-        e.preventDefault();
         try {
             api.post(`/categoria`, {
                 descricao: descricao,
@@ -33,7 +32,6 @@ export const Categoria = () => {
     }
     
     const atualizarCategoria = (e) => {
-        e.preventDefault();
         try {
             api.put(`/categoria/${id}`, {
                 descricao: descricao,
@@ -46,7 +44,6 @@ export const Categoria = () => {
     }
 
     const deletarCategoria = (e) => {
-        e.preventDefault();
         try {
             api.delete(`/categoria/${id}`)
         } catch (error) {
@@ -55,7 +52,7 @@ export const Categoria = () => {
     }
 
     return(
-        <div>
+        <div className="display-flex">
             <Typography variant="h6" gutterBottom>Categorias</Typography>
             <FormProvider {...methods}>
                 <form>

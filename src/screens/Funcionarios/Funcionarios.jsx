@@ -13,7 +13,6 @@ export const Funcionarios = () => {
     const methods = useForm();
 
     const cadastrarFuncionario = (e) => {
-        e.preventDefault();
         console.log(cpf, nome, id);
         try {
             api.post(`/funcionario`, {
@@ -27,7 +26,6 @@ export const Funcionarios = () => {
     }
 
     const atualizarFuncionario = (e) => {
-        e.preventDefault();
         try {
             api.put(`/funcionario/${id}`, {
                 cpf: cpf,
@@ -40,7 +38,6 @@ export const Funcionarios = () => {
     }
 
     const deletarFuncionario = (e) => {
-        e.preventDefault();
         try {
             api.delete(`/funcionario/${id}`)
         } catch (error) {
@@ -61,13 +58,13 @@ export const Funcionarios = () => {
     }, [])
 
     return (
-        <div >
+        <div className='display-flex'>
             <Typography variant="h6" gutterBottom>Funcionários</Typography>
             <FormProvider {...methods}>
                 <form>
                     <Grid container spacing={3}>
-                        <FormInput required name="cpf" label="Cpf" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
-                        <FormInput required name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
+                        <FormInput name="cpf" label="Cpf" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
+                        <FormInput name="nome" label="Nome" value={nome} onChange={(e) => setNome(e.target.value)}/>
                         <FormInput name="id" label="Id do Funcionario" value={id} onChange={(e) => setId(e.target.value)}/>
                         <Grid item xs={12} sm={6}>
                             <InputLabel>Lista de Funcionarios</InputLabel>

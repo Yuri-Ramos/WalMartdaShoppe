@@ -30,7 +30,6 @@ export const ProdutoGerencia = () => {
     }, [])
 
     const cadastrarProduto = (e) => {
-        e.preventDefault();
         try {
             api.post(`/produto`, {
                 descricao: descricao,
@@ -51,7 +50,6 @@ export const ProdutoGerencia = () => {
     }
     
     const atualizarProduto = (e) => {
-        e.preventDefault();
         try {
             api.put(`/categoria/${id}`, {
                 descricao: descricao,
@@ -72,7 +70,6 @@ export const ProdutoGerencia = () => {
     }
 
     const deletarProduto = (e) => {
-        e.preventDefault();
         try {
             api.delete(`/produto/${id}`)
         } catch (error) {
@@ -81,7 +78,7 @@ export const ProdutoGerencia = () => {
     }
 
     return(
-        <div>
+        <div className="display-flex">
             <Typography variant="h6" gutterBottom>Produtos</Typography>
             <FormProvider {...methods}>
                 <form>
