@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../context/Cart";
 import api from "../../data/data";
 import {
-  Card, CardButon, CardDescription, CardImg,
+  Card,
+  CardButon,
+  CardDescription,
+  CardImg,
   CardText,
   CardTitle,
-  Container, Description,
-  Destaque, Photo
+  Container,
+  Description,
+  Destaque,
+  Photo
 } from "./styles.js";
+
 const CardComponent = () => {
+  const { handleAddItemToCart } = useContext(CartContext);
   const [product, setProduct] = useState([]);
   const { id } = useParams();
 
@@ -22,7 +30,6 @@ const CardComponent = () => {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
- 
 
   return (
     <>
@@ -38,7 +45,12 @@ const CardComponent = () => {
             <CardText>R$ {product.valor}</CardText>
             <CardButon
               onClick={() => {
-                handleAddItemToCart();
+                handleAddItemToCart(
+                  product.id,
+                  product.fotoLink,
+                  product.nome,
+                  product.valor
+                );
               }}
             >
               Adicionar ao carrinho{" "}

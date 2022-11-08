@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assents/logoWalmart.png";
+import { CartContext } from "../../context/Cart";
 import "./index.css";
 
 const Header = () => {
+  const { productsCart } = useContext(CartContext);
 
     if(useLocation().pathname == "/login") {
         return (<></>);
@@ -43,7 +45,7 @@ const Header = () => {
           </div>
           <div className="button btn">
               <NavLink to="/cart" className="btn btn-outline-dark">
-              <i className="fa fa-shopping-cart me-1"></i> Carrinho 
+              <i className="fa fa-shopping-cart me-1"></i> Carrinho ({productsCart.length})
               </NavLink>
   
           </div>
