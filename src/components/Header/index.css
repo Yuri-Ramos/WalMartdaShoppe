@@ -44,10 +44,13 @@ lia a:hover:not(.active){
 
     text-decoration: none;
     color: black;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 10px ;
 }
 #letra:hover{
     color:rgb(79, 216, 61);
+}
+#bntff {
+    font-size: small;
 }

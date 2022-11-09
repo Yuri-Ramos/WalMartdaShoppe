@@ -1,10 +1,9 @@
-import React from "react";
-import { useState, useEffect } from 'react';
-import api from '../../data/data';
-import { FormInput } from '../formsStyles'
+import { Grid, InputLabel, MenuItem, Select, Typography } from '@material-ui/core';
+import React, { useEffect, useState } from "react";
 import { Button } from 'react-bootstrap';
-import { InputLabel, Select, MenuItem, Grid, Typography } from '@material-ui/core';
-import { useForm, FormProvider } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
+import api from '../../data/data';
+import { FormInput } from '../formsStyles';
 
 export const Cliente = () =>{
     const[id, setId] = useState('');
@@ -91,7 +90,8 @@ export const Cliente = () =>{
     }
 
     return(
-        <div className="display-flex">
+        
+        <div className="conteiner ">
             <Grid container spacing={3}>
             <Typography variant="h6" gutterBottom>Clientes</Typography>
             </Grid>
@@ -139,5 +139,6 @@ export const Cliente = () =>{
                 </form>
             </FormProvider>
         </div>
+        
     )
 }

@@ -26,7 +26,7 @@ export const CardComponent = () => {
               <Link to={`produto/${produto.id}`}>
                 <CardImg src={produto.fotoLink}></CardImg>
                 <CardTitle>{produto.nome}</CardTitle>
-                <CardText>R$ {produto.valor}</CardText>
+                <CardText id="valor">R$ {produto.valor.toFixed(2)}</CardText>
               </Link>
             </Card>
           );
