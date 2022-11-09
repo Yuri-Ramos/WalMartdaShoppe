@@ -4,9 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "dev": "vite",
-    "build": "npm config set legacy-peer-deps true && vite build",
-    "preview": "vite preview"
+    "build": "npm config set legacy-peer-deps true && vite build && react-scripts build",
+    "test": "react-scripts test",
+    "preview": "vite preview",
+    "eject": "react-scripts eject",     
+    "preinstall": "npx npm-force-resolutions",
+    "heroku-postbuild": "npm install" 
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
