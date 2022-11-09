@@ -2,7 +2,8 @@ import React from 'react';
 
 import "./index.css";
 
-const Login = (props) => {
+
+export const Login = (props) => {
 
     const logar = () =>{
         window.open("/", "_self");
@@ -25,4 +26,3 @@ const Login = (props) => {
     )
 }
 
-export default Login;

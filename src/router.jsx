@@ -1,15 +1,15 @@
 import Footer from "./components/footer/Footer.jsx";
 import Header from "./components/Header";
 import { Cart } from "./screens/Cart/Cart";
+import { Categoria } from './screens/Categoria/Categoria';
+import { Cliente } from './screens/Clientes/Clientes';
 import { DetalheProduto } from "./screens/DetalheProduto";
 import { FaleConosco } from "./screens/FaleConosco/FaleConosco.jsx";
+import { Funcionarios } from './screens/Funcionarios/Funcionarios';
 import { Gerenciamento } from "./screens/Gerenciamento/Gerenciamento";
 import { Home } from "./screens/Home";
-import Login from "./screens/Login";
-import { Funcionarios } from './screens/Funcionarios/Funcionarios'
-import { ProdutoGerencia } from './screens/ProdutoGerencia/ProdutoGerencia'
-import { Cliente } from './screens/Clientes/Clientes'
-import { Categoria } from './screens/Categoria/Categoria'
+import { Login } from "./screens/Login";
+import { ProdutoGerencia } from './screens/ProdutoGerencia/ProdutoGerencia';
 
 
 import React from "react";
